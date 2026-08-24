@@ -1,0 +1,351 @@
+---
+layout: default
+title: Stephan Jacobs | Business Analytics
+permalink: /
+---
+
+<style>
+  .profile-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 24px;
+  }
+
+  .profile-hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  .profile-image {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+  }
+
+  .profile-eyebrow {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #777;
+    margin-bottom: 10px;
+  }
+
+  .profile-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1;
+    margin: 0 0 18px;
+  }
+
+  .profile-role {
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+
+  .profile-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    max-width: 700px;
+  }
+
+  .profile-section {
+    margin-bottom: 70px;
+  }
+
+  .profile-section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .profile-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+  }
+
+  .topics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .topic-card {
+    padding: 28px;
+    border-radius: 16px;
+    background: #f6f6f6;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .topic-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+  .topic-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .topic-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+
+  .profile-quote {
+    margin: 70px 0;
+    padding: 40px;
+    border-left: 5px solid #222;
+    background: #fafafa;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  .profile-contact {
+    text-align: center;
+    padding: 60px 30px;
+    border-radius: 20px;
+    background: #111;
+    color: white;
+  }
+
+  .profile-contact h2 {
+    color: white;
+    margin-top: 0;
+  }
+
+  .profile-contact p {
+    color: #ddd;
+  }
+
+  .profile-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: white;
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+  }
+
+  .profile-button:hover {
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 800px) {
+    .profile-page {
+      padding: 45px 20px;
+    }
+
+    .profile-hero {
+      grid-template-columns: 1fr;
+      gap: 35px;
+      text-align: center;
+    }
+
+    .profile-image {
+      max-width: 230px;
+      margin: 0 auto;
+    }
+
+    .profile-intro {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .topics {
+      grid-template-columns: 1fr;
+    }
+
+    .profile-quote {
+      padding: 28px;
+      font-size: 1.2rem;
+    }
+  }
+</style>
+
+<div class="profile-page">
+
+  <section class="profile-hero">
+
+    <div>
+      <!-- Bild unter assets/img/stephan-jacobs.jpg ablegen -->
+      <img
+        src="{{ '/assets/img/SJacobs.png' | relative_url }}"
+        alt="Stephan Jacobs"
+        class="profile-image"
+      >
+    </div>
+
+    <div>
+      <div class="profile-eyebrow">Business Analytics · SAP · Data</div>
+
+      <h1 class="profile-title">
+        Stephan Jacobs
+      </h1>
+
+      <div class="profile-role">
+        Head of Business Analytics bei Scheer
+      </div>
+
+      <p class="profile-intro">
+        Ich beschäftige mich mit der Frage, wie Unternehmen ihre Daten
+        nicht nur technisch verfügbar machen, sondern daraus echte
+        Entscheidungsgrundlagen schaffen können.
+      </p>
+
+      <p class="profile-intro">
+        Mein Schwerpunkt liegt auf modernen SAP-Analytics-Architekturen
+        rund um SAP Business Data Cloud, SAP Analytics Cloud,
+        SAP Datasphere, Embedded Analytics und SAP BW.
+      </p>
+    </div>
+
+  </section>
+
+
+  <section class="profile-section">
+
+    <h2>Über mich</h2>
+
+    <p>
+      Meine Leidenschaft für Business Analytics begann ursprünglich eher
+      zufällig mit SAP BW. Seitdem begleite ich Unternehmen bei der
+      Konzeption und Umsetzung von Analytics-, Reporting- und
+      Planungslösungen.
+    </p>
+
+    <p>
+      Heute verantworte ich als Head of Business Analytics bei Scheer
+      Themen rund um moderne Datenarchitekturen, Business Intelligence
+      und Unternehmensplanung.
+    </p>
+
+    <p>
+      Dabei interessiert mich besonders die Verbindung zwischen
+      Technologie und Business: Welche Architektur ist wirklich sinnvoll?
+      Welche Daten gehören wohin? Und wie schaffen wir Lösungen, die
+      nicht nur technisch funktionieren, sondern von Fachbereichen
+      tatsächlich genutzt werden?
+    </p>
+
+  </section>
+
+
+  <section class="profile-section">
+
+    <h2>Meine Themen</h2>
+
+    <div class="topics">
+
+      <div class="topic-card">
+        <h3>SAP Business Data Cloud</h3>
+        <p>
+          Datenarchitekturen, Data Products, Datasphere und die
+          Integration von SAP- und Non-SAP-Daten.
+        </p>
+      </div>
+
+      <div class="topic-card">
+        <h3>SAP Analytics Cloud</h3>
+        <p>
+          Reporting, Dashboards, Planung und die Verbindung von
+          Analytics und Unternehmenssteuerung.
+        </p>
+      </div>
+
+      <div class="topic-card">
+        <h3>Embedded Analytics</h3>
+        <p>
+          Operatives Reporting direkt in SAP S/4HANA mit CDS Views,
+          Analytical Queries und Fiori.
+        </p>
+      </div>
+
+      <div class="topic-card">
+        <h3>SAP BW / BW/4HANA</h3>
+        <p>
+          Data-Warehouse-Architekturen, Transformationen und die
+          Weiterentwicklung bestehender BW-Landschaften.
+        </p>
+      </div>
+
+      <div class="topic-card">
+        <h3>Planning</h3>
+        <p>
+          Moderne Unternehmensplanung mit SAP Analytics Cloud sowie
+          Integration bestehender BW- und BPC-Lösungen.
+        </p>
+      </div>
+
+      <div class="topic-card">
+        <h3>Business AI</h3>
+        <p>
+          Die Verbindung von Analytics, Unternehmensdaten und
+          generativer KI für neue datengetriebene Prozesse.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <blockquote class="profile-quote">
+    „Analytics ist für mich nicht die Frage, wie wir noch einen Bericht
+    bauen – sondern wie wir aus Daten bessere Entscheidungen machen.“
+  </blockquote>
+
+
+  <section class="profile-section">
+
+    <h2>Was mich antreibt</h2>
+
+    <p>
+      Technologien verändern sich schnell. Gleichzeitig bleiben viele
+      grundlegende Herausforderungen gleich: unterschiedliche Systeme,
+      heterogene Datenmodelle, komplexe Anforderungen und die Frage,
+      welcher Ansatz langfristig tragfähig ist.
+    </p>
+
+    <p>
+      Genau an dieser Schnittstelle arbeite ich gerne – zwischen
+      Architektur, Technologie und fachlicher Anforderung. Dabei versuche
+      ich, komplexe Themen möglichst verständlich zu machen und Lösungen
+      zu entwickeln, die auch langfristig funktionieren.
+    </p>
+
+  </section>
+
+
+  <section class="profile-contact">
+
+    <h2>Lust auf Austausch?</h2>
+
+    <p>
+      Rund um SAP Analytics, Business Data Cloud, Planung,
+      Embedded Analytics oder moderne Datenarchitekturen tausche
+      ich mich immer gerne aus.
+    </p>
+
+    <a
+      href="https://www.linkedin.com/in/stephan-jacobs-656700149/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BxROAsw%2B5RWCEA0KcXJ0NXg%3D%3D"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="profile-button"
+    >
+      LinkedIn
+    </a>
+
+  </section>
+
+</div>
