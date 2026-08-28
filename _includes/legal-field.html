@@ -1,0 +1,3 @@
+{%- comment -%}Gibt einen Wert aus _data/legal.yml aus oder markiert die Luecke.{%- endcomment -%}
+{%- assign val = include.value -%}
+{%- if val and val != "" -%}{{ val }}{%- elsif site.show_placeholders -%}<span class="ph inline">{{ include.label }}</span>{%- else -%}&nbsp;{%- endif -%}

@@ -1,0 +1,40 @@
+# ------------------------------------------------------------------
+# stephanjacobs.de
+# ------------------------------------------------------------------
+title: "Stephan Jacobs"
+tagline: "Daten · Distanz · Dezibel"
+description: >-
+  Stephan Jacobs, Head of Business Analytics bei Scheer. SAP-Datenarchitekturen,
+  Ausdauersport und Metal mit The Royal Flash.
+url: "https://www.stephanjacobs.de"
+baseurl: ""
+lang: "de"
+
+# Zeigt die gestrichelten Hinweise an offenen Stellen. Vor dem Livegang
+# auf false setzen – dann verschwinden alle Platzhaltermarkierungen.
+show_placeholders: true
+
+permalink: pretty
+markdown: kramdown
+
+collections:
+  themen:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "themen"
+    values:
+      layout: "thema"
+      accent: "analytics"
+
+sass:
+  style: compressed
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - assets/img/README.md

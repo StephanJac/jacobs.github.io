@@ -1,0 +1,13 @@
+{% assign s = include.s %}
+<section class="{{ s.bg }}"{% if s.id %} id="{{ s.id }}"{% endif %}>
+  <div class="wrap">
+    {% include thema/section-head.html s=s %}
+    {% for item in s.items %}
+    <details{% if forloop.first %} open{% endif %}>
+      <summary>{{ item.q }}</summary>
+      <p>{{ item.a | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+    </details>
+    {% endfor %}
+    {% include thema/editorial-note.html label=s.note_label text=s.note %}
+  </div>
+</section>

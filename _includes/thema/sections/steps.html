@@ -1,0 +1,16 @@
+{% assign s = include.s %}
+<section class="{{ s.bg }}"{% if s.id %} id="{{ s.id }}"{% endif %}>
+  <div class="wrap">
+    {% include thema/section-head.html s=s %}
+    <ol class="steps">
+      {% for st in s.items %}
+      <li class="step">
+        <div class="n">{{ forloop.index | prepend: "0" | slice: -2, 2 }}</div>
+        <h3>{{ st.title }}</h3>
+        <p>{{ st.text | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+    {% include thema/editorial-note.html label=s.note_label text=s.note %}
+  </div>
+</section>

@@ -1,0 +1,20 @@
+{% assign s = include.s %}
+<section class="hero">
+  <div class="wrap">
+    {% if s.eyebrow %}<p class="eyebrow">{{ s.eyebrow }}</p>{% endif %}
+    <h1>{{ s.title }}</h1>
+    <p class="lead">{{ s.lead | markdownify | remove: "<p>" | remove: "</p>" }}</p>
+    {% include thema/buttons.html buttons=s.buttons %}
+
+    {% if site.show_placeholders %}
+    <div class="meta">
+      <dl>
+        <dt>SEO-Title</dt><dd>{{ page.seo_title | default: page.title }}</dd>
+        <dt>Meta-Desc.</dt><dd>{{ page.description | strip_newlines }}</dd>
+        {% if page.keywords %}<dt>Keywords</dt><dd>{{ page.keywords | join: " · " }}</dd>{% endif %}
+        <dt>URL</dt><dd>{{ page.url }}</dd>
+      </dl>
+    </div>
+    {% endif %}
+  </div>
+</section>

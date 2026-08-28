@@ -1,0 +1,25 @@
+{% assign p = site.data.profile %}
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="kicker mono">{{ p.kicker }}</p>
+        <h1 class="name">
+          <span>{{ p.name_first }}</span>
+          <span class="b">{{ p.name_last }}</span>
+        </h1>
+        <p class="claim">{{ p.claim }}</p>
+        <p class="sub">{{ p.intro }}</p>
+      </div>
+      <figure class="portrait">
+        <div class="frame" data-shot="{{ p.portrait_shot }}">
+          {% if p.portrait and p.portrait != "" %}
+          <img src="{% if p.portrait contains '://' %}{{ p.portrait }}{% else %}{{ p.portrait | relative_url }}{% endif %}" alt="{{ p.name_first }} {{ p.name_last }}">
+          {% endif %}
+        </div>
+        <figcaption>{{ p.portrait_caption }}</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="scrollcue">Scroll</div>
+</header>

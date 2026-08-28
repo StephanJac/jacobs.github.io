@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
 source "https://rubygems.org"
 
-# gem "rails"
-gem "jekyll"
+# GitHub Pages gibt Jekyll-Version und erlaubte Plugins vor.
+gem "github-pages", group: :jekyll_plugins

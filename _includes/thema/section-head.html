@@ -1,0 +1,8 @@
+{% assign s = include.s %}
+{% if s.eyebrow or s.title or s.intro %}
+<div class="sechead">
+  {% if s.eyebrow %}<p class="eyebrow{% if s.bg == 'tint' %} dim{% endif %}">{{ s.eyebrow }}</p>{% endif %}
+  {% if s.title %}<h2>{{ s.title }}</h2>{% endif %}
+  {% if s.intro %}<p>{{ s.intro | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
+</div>
+{% endif %}

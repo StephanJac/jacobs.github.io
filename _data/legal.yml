@@ -1,0 +1,30 @@
+# ------------------------------------------------------------------
+# Angaben fuer Impressum und Datenschutz. Einmal hier eintragen,
+# beide Seiten ziehen daraus.
+#
+# Leere Felder erscheinen als markierter Platzhalter, solange
+# show_placeholders in _config.yml auf true steht.
+# ------------------------------------------------------------------
+name: "Stephan Jacobs"
+strasse: ""            # z. B. "Musterstraße 1"
+plz_ort: ""            # z. B. "45879 Gelsenkirchen"
+land: "Deutschland"
+email: ""              # Kontaktadresse fuer das Impressum
+telefon: ""            # optional, keine Pflichtangabe fuer Privatpersonen
+
+# Verantwortlich nach § 18 Abs. 2 MStV. Meist dieselbe Person.
+verantwortlich: "Stephan Jacobs"
+
+# Umsatzsteuer-ID nur angeben, wenn vorhanden. Sonst leer lassen –
+# der Abschnitt wird dann gar nicht ausgegeben.
+ust_id: ""
+
+# Hoster. GitHub Pages, sofern nichts geaendert wurde.
+hoster_name: "GitHub, Inc."
+hoster_adresse: "88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA"
+hoster_datenschutz: "https://docs.github.com/site-policy/privacy-policies/github-privacy-statement"
+
+# Bildnachweise, falls Fotos von Dritten stammen
+bildnachweise: ""
+
+stand: "August 2026"

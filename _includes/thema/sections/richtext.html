@@ -1,0 +1,9 @@
+{% assign s = include.s %}
+<section class="{{ s.bg }}"{% if s.id %} id="{{ s.id }}"{% endif %}>
+  <div class="wrap">
+    {% include thema/section-head.html s=s %}
+    <div class="prose">{{ s.body | markdownify }}</div>
+    {% include thema/buttons.html buttons=s.buttons %}
+    {% include thema/editorial-note.html label=s.note_label text=s.note %}
+  </div>
+</section>

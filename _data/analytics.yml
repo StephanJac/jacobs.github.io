@@ -1,0 +1,51 @@
+eyebrow: "01 — Business Analytics"
+title: "Aus Daten bessere Entscheidungen machen"
+lead:
+  - >-
+    Ich beschäftige mich damit, wie Unternehmen ihre Daten nicht nur technisch
+    verfügbar machen, sondern daraus echte Entscheidungsgrundlagen schaffen. Mein
+    Schwerpunkt liegt auf modernen SAP-Analytics-Architekturen: SAP Business Data
+    Cloud, SAP Analytics Cloud, SAP Datasphere, Embedded Analytics und SAP BW.
+  - >-
+    Angefangen hat das eher zufällig mit SAP BW. Seitdem begleite ich Unternehmen
+    bei Analytics-, Reporting- und Planungslösungen – und interessiere mich
+    besonders für die Stelle, an der Technologie auf fachliche Anforderung trifft.
+    Welche Architektur ist wirklich sinnvoll? Welche Daten gehören wohin? Und wie
+    entstehen Lösungen, die Fachbereiche tatsächlich benutzen?
+
+topics:
+  - kicker: "Plattform"
+    title: "SAP Business Data Cloud"
+    text: "Datenarchitekturen, Data Products, Datasphere und die Integration von SAP- und Non-SAP-Daten."
+    url: "/themen/sap-business-data-cloud/"
+  - kicker: "Analyse & Planung"
+    title: "SAP Analytics Cloud"
+    text: "Reporting, Dashboards, Planung und die Verbindung von Analytics und Unternehmenssteuerung."
+    url: "/themen/sap-business-data-cloud/#bausteine"
+  - kicker: "Prozess"
+    title: "Embedded Analytics"
+    text: "Operatives Reporting direkt in SAP S/4HANA mit CDS Views, Analytical Queries und Fiori."
+    url: "/themen/s4hana-embedded-analytics/"
+  - kicker: "Bestand"
+    title: "SAP BW / BW/4HANA"
+    text: "Data-Warehouse-Architekturen, Transformationen und die Weiterentwicklung bestehender Landschaften."
+    url: "/themen/sap-business-data-cloud/#fokus-transformation"
+  - kicker: "Steuerung"
+    title: "Planning"
+    text: "Moderne Unternehmensplanung mit SAP Analytics Cloud sowie Integration bestehender BW- und BPC-Lösungen."
+    url: "/themen/sap-business-data-cloud/#fokus-transformation"
+  - kicker: "Neu"
+    title: "Business AI"
+    text: "Die Verbindung von Analytics, Unternehmensdaten und generativer KI für datengetriebene Prozesse."
+    url: "/themen/sap-business-data-cloud/#fokus-aufbau"
+
+quote: "„Nicht wie wir noch einen Bericht bauen — sondern wie wir aus Daten bessere Entscheidungen machen.“"
+quote_who: "Worum es mir geht"
+outro: >-
+  Technologien ändern sich schnell. Die eigentlichen Herausforderungen bleiben:
+  unterschiedliche Systeme, heterogene Datenmodelle, komplexe Anforderungen und
+  die Frage, welcher Ansatz langfristig trägt. Genau an dieser Schnittstelle
+  arbeite ich am liebsten.
+cta:
+  label: "Mein Ansatz im Detail"
+  url: "/themen/data-und-analytics/"

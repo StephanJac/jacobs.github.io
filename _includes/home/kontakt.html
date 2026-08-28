@@ -1,0 +1,19 @@
+{% assign k = site.data.kontakt %}
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div class="split">
+      <div class="rise">
+        <p class="secnum">{{ k.eyebrow }}</p>
+        <h2>{{ k.title }}</h2>
+      </div>
+      <div class="rise">
+        <p class="lead">{{ k.lead }}</p>
+        <div class="links">
+          {% for l in k.links %}
+          <a href="{{ l.url }}"{% unless l.url contains 'mailto' %} target="_blank" rel="noopener"{% endunless %}>{{ l.label }}</a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

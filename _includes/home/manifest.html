@@ -1,0 +1,23 @@
+{% assign m = site.data.manifest %}
+<section id="prinzip">
+  <div class="wrap">
+    <div class="split">
+      <div class="rise">
+        <p class="secnum">{{ m.eyebrow }}</p>
+        <h2>{{ m.title }}</h2>
+      </div>
+      <div class="rise">
+        <p class="lead">{{ m.lead }}</p>
+      </div>
+    </div>
+    <div class="manifest">
+      {% for i in m.items %}
+      <div class="rise">
+        <span class="n">{{ i.num }}</span>
+        <p class="t">{{ i.word }}</p>
+        <p>{{ i.text }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

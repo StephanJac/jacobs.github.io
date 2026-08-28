@@ -1,0 +1,24 @@
+{% assign s = include.s %}
+<section class="{{ s.bg }}"{% if s.id %} id="{{ s.id }}"{% endif %}>
+  <div class="wrap">
+    {% include thema/section-head.html s=s %}
+    <table{% if s.variant %} class="{{ s.variant }}"{% endif %}>
+      {% if s.head %}
+      <thead><tr>{% for h in s.head %}<th>{{ h }}</th>{% endfor %}</tr></thead>
+      {% endif %}
+      <tbody>
+        {% for row in s.rows %}
+        <tr>
+          {% for cell in row.cells %}
+            {% if forloop.first %}<th scope="row">{{ cell | markdownify | remove: "<p>" | remove: "</p>" }}</th>
+            {% else %}<td>{{ cell | markdownify | remove: "<p>" | remove: "</p>" }}</td>{% endif %}
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% if s.outro %}<p class="outro">{{ s.outro | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endif %}
+    {% include thema/buttons.html buttons=s.buttons %}
+    {% include thema/editorial-note.html label=s.note_label text=s.note %}
+  </div>
+</section>

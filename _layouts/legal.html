@@ -1,0 +1,18 @@
+---
+layout: base
+---
+<section class="legal">
+  <div class="wrap">
+    <p class="secnum">{{ page.eyebrow }}</p>
+    <h1>{{ page.title }}</h1>
+    <div class="legal-body">
+      {{ content }}
+    </div>
+    {% if page.hinweis and site.show_placeholders %}
+    <div class="note">
+ <!--   <b>Vor dem Livegang prüfen</b>{{ page.hinweis }}-->  
+    </div>
+    {% endif %}
+    <p class="stand">Stand: {{ site.data.legal.stand }}</p>
+  </div>
+</section>

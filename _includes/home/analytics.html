@@ -1,0 +1,39 @@
+{% assign a = site.data.analytics %}
+<section class="light" id="analytics" data-world="analytics">
+  <div class="wrap">
+    <div class="split">
+      <div class="rise">
+        <p class="secnum">{{ a.eyebrow }}</p>
+        <h2>{{ a.title }}</h2>
+      </div>
+      <div class="rise">
+        {% for para in a.lead %}<p class="lead">{{ para | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endfor %}
+      </div>
+    </div>
+
+    <div class="cards">
+      {% for t in a.topics %}
+      <a class="card rise" href="{{ t.url | relative_url }}">
+        <span class="k">{{ t.kicker }}</span>
+        <h3>{{ t.title }}</h3>
+        <p>{{ t.text }}</p>
+        <span class="go">Mehr dazu &rarr;</span>
+      </a>
+      {% endfor %}
+    </div>
+
+    <div class="split split-wide">
+      <blockquote class="pull rise">
+        <p>{{ a.quote }}</p>
+        <span class="who">{{ a.quote_who }}</span>
+      </blockquote>
+      <div class="rise">
+        <p class="lead">{{ a.outro }}</p>
+        <div class="btns">
+          <a class="btn" href="{{ a.cta.url | relative_url }}">{{ a.cta.label }}</a>
+          <a class="btn ghost" href="{{ site.data.profile.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

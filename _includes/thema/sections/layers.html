@@ -1,0 +1,25 @@
+{% assign s = include.s %}
+<section class="{{ s.bg }}"{% if s.id %} id="{{ s.id }}"{% endif %}>
+  <div class="wrap">
+    {% include thema/section-head.html s=s %}
+    <div class="layers">
+      {% for l in s.items %}
+      {% if l.url %}<a class="layer" href="{{ l.url | relative_url }}">{% else %}<div class="layer static">{% endif %}
+        <div class="side">
+          <div class="tier">{{ l.tier }}</div>
+          <div class="ask">{{ l.ask }}</div>
+        </div>
+        <div>
+          <h3>{{ l.title }}</h3>
+          <p class="claim">{{ l.claim }}</p>
+          {% if l.chips %}
+          <div class="chips">{% for c in l.chips %}<span class="chip">{{ c }}</span>{% endfor %}</div>
+          {% endif %}
+        </div>
+        {% if l.url %}<div class="go" aria-hidden="true">&rarr;</div>{% endif %}
+      {% if l.url %}</a>{% else %}</div>{% endif %}
+      {% endfor %}
+    </div>
+    {% include thema/editorial-note.html label=s.note_label text=s.note %}
+  </div>
+</section>

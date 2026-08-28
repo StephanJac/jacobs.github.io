@@ -1,0 +1,12 @@
+{% assign s = include.s %}
+<section class="{{ s.bg | default: 'dark' }}"{% if s.id %} id="{{ s.id }}"{% endif %}>
+  <div class="wrap">
+    <div class="ctaband">
+      <div class="ctatext">
+        <h2>{{ s.title }}</h2>
+        <p class="flat">{{ s.text }}</p>
+      </div>
+      {% include thema/buttons.html buttons=s.buttons flat=true %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+{% assign s = include.s %}
+<section class="{{ s.bg }}"{% if s.id %} id="{{ s.id }}"{% endif %}>
+  <div class="wrap">
+    {% include thema/section-head.html s=s %}
+    <div class="grid g{{ s.columns | default: 3 }}">
+      {% for item in s.items %}
+      <div class="cell">
+        {% if item.label %}<span class="q">{{ item.label }}</span>{% endif %}
+        <h3>{{ item.title }}</h3>
+        {% for para in item.body %}<p>{{ para | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endfor %}
+        {% if item.links %}
+        <ul class="ticks tight-list">
+          {% for l in item.links %}
+          <li>{% if l.url %}<a href="{{ l.url | relative_url }}">{{ l.label }}</a>{% else %}{{ l.label }}{% endif %}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if item.meta %}<p class="small">{{ item.meta }}</p>{% endif %}
+        {% if item.button %}<p class="flat"><a class="btn btn-2 btn-s" href="{{ item.button.url | relative_url }}">{{ item.button.label }}</a></p>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% include thema/buttons.html buttons=s.buttons %}
+    {% include thema/editorial-note.html label=s.note_label text=s.note %}
+  </div>
+</section>

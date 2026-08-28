@@ -1,345 +1,428 @@
-<style>
-  .profile-page {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 70px 24px;
-  }
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  .profile-hero {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 60px;
-    align-items: center;
-    margin-bottom: 80px;
-  }
+  <title>Stephan Jacobs — Daten · Distanz · Dezibel</title>
+  <meta name="description" content="Stephan Jacobs, Head of Business Analytics bei Scheer. SAP-Datenarchitekturen, Ausdauersport und Metal mit The Royal Flash.">
+  <link rel="canonical" href="http://localhost:4000/">
 
-  .profile-image {
-    width: 100%;
-    max-width: 320px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
-  }
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stephan Jacobs">
+  <meta property="og:description" content="Stephan Jacobs, Head of Business Analytics bei Scheer. SAP-Datenarchitekturen, Ausdauersport und Metal mit The Royal Flash.">
+  <meta property="og:url" content="http://localhost:4000/">
+  <meta name="theme-color" content="#0b0b0d">
 
-  .profile-eyebrow {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: #777;
-    margin-bottom: 10px;
-  }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
 
-  .profile-title {
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    line-height: 1;
-    margin: 0 0 18px;
-  }
+  
+  
+  
+  
+</head>
 
-  .profile-role {
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin-bottom: 25px;
-  }
+<body class="home" data-accent="analytics">
+  <nav class="top">
+  <div class="wrap">
+    <a class="brand" href="/">Stephan Jacobs<i>.</i></a>
+    <ul>
+      
+      <li><a class="jump" href="/#analytics"><em>01</em>Analytics</a></li>
+      
+      <li><a class="jump" href="/#ausdauer"><em>02</em>Ausdauer</a></li>
+      
+      <li><a class="jump" href="/#metal"><em>03</em>Metal</a></li>
+      
+      <li><a class="jump" href="/#kontakt"><em>04</em>Kontakt</a></li>
+      
+    </ul>
+  </div>
+</nav>
 
-  .profile-intro {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #444;
-    max-width: 700px;
-  }
-
-  .profile-section {
-    margin-bottom: 70px;
-  }
-
-  .profile-section h2 {
-    font-size: 2rem;
-    margin-bottom: 25px;
-  }
-
-  .profile-section p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #444;
-  }
-
-  .topics {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .topic-card {
-    padding: 28px;
-    border-radius: 16px;
-    background: #f6f6f6;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-
-  .topic-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  }
-
-  .topic-card h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
-  }
-
-  .topic-card p {
-    font-size: 0.95rem;
-    margin-bottom: 0;
-  }
-
-  .profile-quote {
-    margin: 70px 0;
-    padding: 40px;
-    border-left: 5px solid #222;
-    background: #fafafa;
-    font-size: 1.4rem;
-    line-height: 1.6;
-    font-style: italic;
-  }
-
-  .profile-contact {
-    text-align: center;
-    padding: 60px 30px;
-    border-radius: 20px;
-    background: #111;
-    color: white;
-  }
-
-  .profile-contact h2 {
-    color: white;
-    margin-top: 0;
-  }
-
-  .profile-contact p {
-    color: #ddd;
-  }
-
-  .profile-button {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 14px 28px;
-    border-radius: 30px;
-    background: white;
-    color: #111;
-    text-decoration: none;
-    font-weight: 600;
-    transition: transform 0.2s ease;
-  }
-
-  .profile-button:hover {
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 800px) {
-    .profile-page {
-      padding: 45px 20px;
-    }
-
-    .profile-hero {
-      grid-template-columns: 1fr;
-      gap: 35px;
-      text-align: center;
-    }
-
-    .profile-image {
-      max-width: 230px;
-      margin: 0 auto;
-    }
-
-    .profile-intro {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .topics {
-      grid-template-columns: 1fr;
-    }
-
-    .profile-quote {
-      padding: 28px;
-      font-size: 1.2rem;
-    }
-  }
-</style>
-
-<div class="profile-page">
-
-  <section class="profile-hero">
-
-    <div>
-      <!-- Bild unter assets/img/stephan-jacobs.jpg ablegen -->
-      <img
-        src="/assets/img/SJacobs.png"
-        alt="Stephan Jacobs"
-        class="profile-image"
-      >
-    </div>
-
-    <div>
-      <div class="profile-eyebrow">Business Analytics · SAP · Data</div>
-
-      <h1 class="profile-title">
-        Stephan Jacobs
-      </h1>
-
-      <div class="profile-role">
-        Head of Business Analytics bei Scheer
+  
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="kicker mono">Daten · Distanz · Dezibel</p>
+        <h1 class="name">
+          <span>Stephan</span>
+          <span class="b">Jacobs</span>
+        </h1>
+        <p class="claim">Ich baue Dinge, die lange halten.</p>
+        <p class="sub">Head of Business Analytics bei Scheer. Datenarchitekturen, lange Einheiten und eine Metal-Band aus dem Ruhrpott. Drei Disziplinen, ein Prinzip: Wiederholung schlägt Talent.</p>
       </div>
+      <figure class="portrait">
+        <div class="frame" data-shot="Portrait einsetzen: Halbnah, harte Lichtkante, ernst — nicht das Bewerbungsfoto">
+          
+          <img src="https://www.stephanjacobs.de/assets/img/SJacobs.png" alt="Stephan Jacobs">
+          
+        </div>
+        <figcaption>Ruhrpott · seit über 20 Jahren in SAP-Analytics</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="scrollcue">Scroll</div>
+</header>
 
-      <p class="profile-intro">
-        Ich beschäftige mich mit der Frage, wie Unternehmen ihre Daten
-        nicht nur technisch verfügbar machen, sondern daraus echte
-        Entscheidungsgrundlagen schaffen können.
-      </p>
 
-      <p class="profile-intro">
-        Mein Schwerpunkt liegt auf modernen SAP-Analytics-Architekturen
-        rund um SAP Business Data Cloud, SAP Analytics Cloud,
-        SAP Datasphere, Embedded Analytics und SAP BW.
-      </p>
+<section id="prinzip">
+  <div class="wrap">
+    <div class="split">
+      <div class="rise">
+        <p class="secnum">00 — Das Prinzip</p>
+        <h2>Drei Systeme, dieselbe Mechanik</h2>
+      </div>
+      <div class="rise">
+        <p class="lead">Eine Datenarchitektur, ein Trainingsplan und ein Bandprobenraum haben mehr gemeinsam, als es aussieht. In allen drei Fällen entscheidet nicht der geniale Einfall, sondern ob die Struktur den Alltag übersteht. Was nur einmal funktioniert hat, hat nicht funktioniert.</p>
+      </div>
+    </div>
+    <div class="manifest">
+      
+      <div class="rise">
+        <span class="n">01</span>
+        <p class="t">Last</p>
+        <p>Systeme zeigen ihren Charakter unter Belastung – im Monatsabschluss, im letzten Drittel, in der letzten Zugabe. Alles davor ist Behauptung.</p>
+      </div>
+      
+      <div class="rise">
+        <span class="n">02</span>
+        <p class="t">Takt</p>
+        <p>Batchlauf, Trittfrequenz, Tempo. Der gemeinsame Nenner ist Wiederholbarkeit: dieselbe Qualität beim hundertsten Mal wie beim ersten.</p>
+      </div>
+      
+      <div class="rise">
+        <span class="n">03</span>
+        <p class="t">Ehrlichkeit</p>
+        <p>Daten lügen nicht, Trainingsdaten schon gar nicht – man muss sie nur lesen wollen. Dasselbe gilt für Aufnahmen der eigenen Band.</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="light" id="analytics" data-world="analytics">
+  <div class="wrap">
+    <div class="split">
+      <div class="rise">
+        <p class="secnum">01 — Business Analytics</p>
+        <h2>Aus Daten bessere Entscheidungen machen</h2>
+      </div>
+      <div class="rise">
+        <p class="lead">Ich beschäftige mich damit, wie Unternehmen ihre Daten nicht nur technisch verfügbar machen, sondern daraus echte Entscheidungsgrundlagen schaffen. Mein Schwerpunkt liegt auf modernen SAP-Analytics-Architekturen: SAP Business Data Cloud, SAP Analytics Cloud, SAP Datasphere, Embedded Analytics und SAP BW.
+</p><p class="lead">Angefangen hat das eher zufällig mit SAP BW. Seitdem begleite ich Unternehmen bei Analytics-, Reporting- und Planungslösungen – und interessiere mich besonders für die Stelle, an der Technologie auf fachliche Anforderung trifft. Welche Architektur ist wirklich sinnvoll? Welche Daten gehören wohin? Und wie entstehen Lösungen, die Fachbereiche tatsächlich benutzen?
+</p>
+      </div>
     </div>
 
-  </section>
-
-
-  <section class="profile-section">
-
-    <h2>Über mich</h2>
-
-    <p>
-      Meine Leidenschaft für Business Analytics begann ursprünglich eher
-      zufällig mit SAP BW. Seitdem begleite ich Unternehmen bei der
-      Konzeption und Umsetzung von Analytics-, Reporting- und
-      Planungslösungen.
-    </p>
-
-    <p>
-      Heute verantworte ich als Head of Business Analytics bei Scheer
-      Themen rund um moderne Datenarchitekturen, Business Intelligence
-      und Unternehmensplanung.
-    </p>
-
-    <p>
-      Dabei interessiert mich besonders die Verbindung zwischen
-      Technologie und Business: Welche Architektur ist wirklich sinnvoll?
-      Welche Daten gehören wohin? Und wie schaffen wir Lösungen, die
-      nicht nur technisch funktionieren, sondern von Fachbereichen
-      tatsächlich genutzt werden?
-    </p>
-
-  </section>
-
-
-  <section class="profile-section">
-
-    <h2>Meine Themen</h2>
-
-    <div class="topics">
-
-      <div class="topic-card">
+    <div class="cards">
+      
+      <a class="card rise" href="/themen/sap-business-data-cloud/">
+        <span class="k">Plattform</span>
         <h3>SAP Business Data Cloud</h3>
-        <p>
-          Datenarchitekturen, Data Products, Datasphere und die
-          Integration von SAP- und Non-SAP-Daten.
-        </p>
-      </div>
-
-      <div class="topic-card">
+        <p>Datenarchitekturen, Data Products, Datasphere und die Integration von SAP- und Non-SAP-Daten.</p>
+        <span class="go">Mehr dazu &rarr;</span>
+      </a>
+      
+      <a class="card rise" href="/themen/sap-business-data-cloud/#bausteine">
+        <span class="k">Analyse & Planung</span>
         <h3>SAP Analytics Cloud</h3>
-        <p>
-          Reporting, Dashboards, Planung und die Verbindung von
-          Analytics und Unternehmenssteuerung.
-        </p>
-      </div>
-
-      <div class="topic-card">
+        <p>Reporting, Dashboards, Planung und die Verbindung von Analytics und Unternehmenssteuerung.</p>
+        <span class="go">Mehr dazu &rarr;</span>
+      </a>
+      
+      <a class="card rise" href="/themen/s4hana-embedded-analytics/">
+        <span class="k">Prozess</span>
         <h3>Embedded Analytics</h3>
-        <p>
-          Operatives Reporting direkt in SAP S/4HANA mit CDS Views,
-          Analytical Queries und Fiori.
-        </p>
-      </div>
-
-      <div class="topic-card">
+        <p>Operatives Reporting direkt in SAP S/4HANA mit CDS Views, Analytical Queries und Fiori.</p>
+        <span class="go">Mehr dazu &rarr;</span>
+      </a>
+      
+      <a class="card rise" href="/themen/sap-business-data-cloud/#fokus-transformation">
+        <span class="k">Bestand</span>
         <h3>SAP BW / BW/4HANA</h3>
-        <p>
-          Data-Warehouse-Architekturen, Transformationen und die
-          Weiterentwicklung bestehender BW-Landschaften.
-        </p>
-      </div>
-
-      <div class="topic-card">
+        <p>Data-Warehouse-Architekturen, Transformationen und die Weiterentwicklung bestehender Landschaften.</p>
+        <span class="go">Mehr dazu &rarr;</span>
+      </a>
+      
+      <a class="card rise" href="/themen/sap-business-data-cloud/#fokus-transformation">
+        <span class="k">Steuerung</span>
         <h3>Planning</h3>
-        <p>
-          Moderne Unternehmensplanung mit SAP Analytics Cloud sowie
-          Integration bestehender BW- und BPC-Lösungen.
-        </p>
-      </div>
-
-      <div class="topic-card">
+        <p>Moderne Unternehmensplanung mit SAP Analytics Cloud sowie Integration bestehender BW- und BPC-Lösungen.</p>
+        <span class="go">Mehr dazu &rarr;</span>
+      </a>
+      
+      <a class="card rise" href="/themen/sap-business-data-cloud/#fokus-aufbau">
+        <span class="k">Neu</span>
         <h3>Business AI</h3>
-        <p>
-          Die Verbindung von Analytics, Unternehmensdaten und
-          generativer KI für neue datengetriebene Prozesse.
-        </p>
-      </div>
-
+        <p>Die Verbindung von Analytics, Unternehmensdaten und generativer KI für datengetriebene Prozesse.</p>
+        <span class="go">Mehr dazu &rarr;</span>
+      </a>
+      
     </div>
 
-  </section>
+    <div class="split split-wide">
+      <blockquote class="pull rise">
+        <p>„Nicht wie wir noch einen Bericht bauen — sondern wie wir aus Daten bessere Entscheidungen machen.“</p>
+        <span class="who">Worum es mir geht</span>
+      </blockquote>
+      <div class="rise">
+        <p class="lead">Technologien ändern sich schnell. Die eigentlichen Herausforderungen bleiben: unterschiedliche Systeme, heterogene Datenmodelle, komplexe Anforderungen und die Frage, welcher Ansatz langfristig trägt. Genau an dieser Schnittstelle arbeite ich am liebsten.</p>
+        <div class="btns">
+          <a class="btn" href="/themen/data-und-analytics/">Mein Ansatz im Detail</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/stephan-jacobs-656700149/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-  <blockquote class="profile-quote">
-    „Analytics ist für mich nicht die Frage, wie wir noch einen Bericht
-    bauen – sondern wie wir aus Daten bessere Entscheidungen machen.“
-  </blockquote>
+<section class="mid" id="ausdauer" data-world="ausdauer">
+  <div class="wrap">
+    <div class="split">
+      <div class="rise">
+        <p class="secnum">02 — Ausdauersport</p>
+        <h2>Lange Einheiten, ehrliche Zahlen</h2>
+      </div>
+      <div class="rise">
+        <p class="lead">Ausdauersport ist der Teil meines Lebens, in dem ich am direktesten erlebe, was Daten können — und wo ihre Grenze liegt. Jede Einheit wird gemessen, ausgewertet und in einen Plan eingeordnet. Und trotzdem entscheidet am Ende, ob man an einem nasskalten Dienstag rausgeht.</p><p class="lead">Diese Doppelperspektive nehme ich mit in Projekte: Ich weiß, wie hilfreich eine gute Kennzahl ist. Und wie leicht man sich mit ihr etwas vormacht.</p>
+      </div>
+    </div>
+
+    <div class="stats">
+      
+      <div class="rise">
+        <div class="v"><span class="ph">Distanz</span></div>
+        <div class="l">Lieblingsdistanz</div>
+      </div>
+      
+      <div class="rise">
+        <div class="v"><span class="ph">Std/Woche</span></div>
+        <div class="l">Trainingsumfang</div>
+      </div>
+      
+      <div class="rise">
+        <div class="v"><span class="ph">Jahr</span></div>
+        <div class="l">Dabei seit</div>
+      </div>
+      
+      <div class="rise">
+        <div class="v"><span class="ph">Ziel</span></div>
+        <div class="l">Nächstes Vorhaben</div>
+      </div>
+      
+    </div>
+
+    <div class="split split-wide align-stretch">
+      
+<figure class="shot  rise" data-shot="Foto einsetzen: Du in Bewegung — Seitenprofil, Gegenlicht, kein Zielfoto mit Startnummer">
+  
+  <img src="/assets/img/ausdauer-01.jpg" alt="Unterwegs im Training" loading="lazy">
+  
+</figure>
+
+      <div class="rise">
+        <h3>Was der Sport mit dem Beruf zu tun hat</h3>
+        <p class="lead">Trainingssteuerung ist im Kern nichts anderes als ein Planungsmodell: Ist-Daten, Zielwerte, Abweichungsanalyse, Szenarien. Nur ist der Feedbackzyklus kürzer und das Ergebnis unbestechlicher. Wer drei Wochen lügt, sieht es am vierten Sonntag.</p><p class="lead">Der wichtigste Übertrag ist aber ein anderer: Fortschritt entsteht nicht durch die eine perfekte Einheit, sondern durch die achtzigste unspektakuläre. Auch das gilt für Datenarchitekturen.</p>
+        <div class="btns">
+          <a class="btn ghost" href="#kontakt">Mitfahren? Melde dich</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="gallery">
+      
+        
+<figure class="shot  rise" data-shot="Querformat: Landschaft, du klein im Bild — zeigt Distanz statt Leistung">
+  
+  <img src="/assets/img/ausdauer-02.jpg" alt="Lange Einheit" loading="lazy">
+  
+</figure>
+
+      
+        
+<figure class="shot  rise" data-shot="Detail: Schuhe, Rad, Uhr am Handgelenk mit Daten">
+  
+  <img src="/assets/img/ausdauer-03.jpg" alt="Ausrüstung" loading="lazy">
+  
+</figure>
+
+      
+        
+<figure class="shot  rise" data-shot="Nach der Einheit: ehrlich, verschwitzt, kein Posieren">
+  
+  <img src="/assets/img/ausdauer-04.jpg" alt="Nach dem Training" loading="lazy">
+  
+</figure>
+
+      
+    </div>
+  </div>
+</section>
 
 
-  <section class="profile-section">
+<section class="black" id="metal" data-world="metal">
+  <div class="wrap">
+    <div class="split">
+      <div class="rise">
+        <p class="secnum">03 — Metal</p>
+        <h2>The Royal Flash</h2>
+      </div>
+      <div class="rise">
+        <p class="lead"><strong>Authentic Metal from the Heart of Germany.</strong> Eine Metal-Band aus dem Ruhrpott, die Metal und Rock mit Einflüssen aus allerlei Genres mischt. Der größte Teil des Materials ist selbst geschrieben, dazu kommen ein paar Cover als Überraschung.
+</p><p class="lead">Spaß ist eine der Hauptmotivationen — was nicht heißt, dass wir uns nicht nach den Sternen strecken. Wir suchen ständig nach Bühnen, auf denen wir das Material zeigen können.
+</p>
+        <div class="btns">
+          
+          <a class="btn solid" href="https://www.the-royal-flash.de" target="_blank" rel="noopener">the-royal-flash.de</a>
+          
+          <a class="btn ghost" href="https://www.instagram.com/the_royal_flash" target="_blank" rel="noopener">Instagram</a>
+          
+          <a class="btn ghost" href="https://www.youtube.com/channel/UCg3tXPBqIA7hK8Dpt0iZHzw" target="_blank" rel="noopener">YouTube</a>
+          
+          <a class="btn ghost" href="https://www.facebook.com/61565879413514" target="_blank" rel="noopener">Facebook</a>
+          
+        </div>
+        <p class="mono role">Meine Rolle in der Band: <span class="ph inline">ergänzen</span></p>
+      </div>
+    </div>
 
-    <h2>Was mich antreibt</h2>
+    <div class="gallery">
+      
+        
+<figure class="shot  rise" data-shot="Bandfoto">
+  
+  <img src="https://www.the-royal-flash.de/assets/images/Foto2.JPG" alt="The Royal Flash" loading="lazy">
+  
+</figure>
 
-    <p>
-      Technologien verändern sich schnell. Gleichzeitig bleiben viele
-      grundlegende Herausforderungen gleich: unterschiedliche Systeme,
-      heterogene Datenmodelle, komplexe Anforderungen und die Frage,
-      welcher Ansatz langfristig tragfähig ist.
-    </p>
+      
+        
+<figure class="shot  rise" data-shot="Live in Witten">
+  
+  <img src="https://www.the-royal-flash.de/assets/images/WittenLive_01.jpg" alt="The Royal Flash live" loading="lazy">
+  
+</figure>
 
-    <p>
-      Genau an dieser Schnittstelle arbeite ich gerne – zwischen
-      Architektur, Technologie und fachlicher Anforderung. Dabei versuche
-      ich, komplexe Themen möglichst verständlich zu machen und Lösungen
-      zu entwickeln, die auch langfristig funktionieren.
-    </p>
+      
+        
+<figure class="shot  rise" data-shot="Live in Witten">
+  
+  <img src="https://www.the-royal-flash.de/assets/images/WittenLive_03.jpg" alt="The Royal Flash live" loading="lazy">
+  
+</figure>
 
-  </section>
+      
+        
+<figure class="shot  rise" data-shot="Live in Witten">
+  
+  <img src="https://www.the-royal-flash.de/assets/images/WittenLive_05.jpg" alt="The Royal Flash live" loading="lazy">
+  
+</figure>
+
+      
+    </div>
+
+    <div class="block">
+      <p class="secnum rise">Hören &amp; sehen</p>
+      <div class="videos">
+        
+        <div class="vid rise" data-yt="v4diO6Z7Vuk" role="button" tabindex="0" aria-label="Video abspielen">
+          <img src="https://i.ytimg.com/vi/v4diO6Z7Vuk/hqdefault.jpg" alt="" loading="lazy">
+          <div class="play"><span>&#9654;</span></div>
+        </div>
+        
+        <div class="vid rise" data-yt="aKFR-2wQNgY" role="button" tabindex="0" aria-label="Video abspielen">
+          <img src="https://i.ytimg.com/vi/aKFR-2wQNgY/hqdefault.jpg" alt="" loading="lazy">
+          <div class="play"><span>&#9654;</span></div>
+        </div>
+        
+        <div class="vid rise" data-yt="AGji-uerIS8" role="button" tabindex="0" aria-label="Video abspielen">
+          <img src="https://i.ytimg.com/vi/AGji-uerIS8/hqdefault.jpg" alt="" loading="lazy">
+          <div class="play"><span>&#9654;</span></div>
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="secnum rise">Zuletzt live <span class="ph inline gap">Termine aktualisieren</span></p>
+      <div class="gigs">
+        
+        <div class="gig rise">
+          <div class="d">17 JAN 26</div>
+          <div><div class="t">Darkness Rising</div><p class="p">C4 Consol, Gelsenkirchen</p></div>
+          <div class="tag">Ausverkauft</div>
+        </div>
+        
+        <div class="gig rise">
+          <div class="d">28 MRZ 26</div>
+          <div><div class="t">Rage against Racism — Warmup Slot Battle</div><p class="p">JZ Die Mühle, Duisburg</p></div>
+          <div class="tag">Gespielt</div>
+        </div>
+        
+        <div class="gig rise">
+          <div class="d">13 JUN 26</div>
+          <div><div class="t">Underground Metal Fest</div><p class="p">Werkhof Kulturzentrum Hohenlimburg, Hagen</p></div>
+          <div class="tag">Gespielt</div>
+        </div>
+        
+        <div class="gig rise">
+          <div class="d">01 AUG 26</div>
+          <div><div class="t">Metal in Duisburg</div><p class="p">Parkhaus Meiderich, Duisburg</p></div>
+          <div class="tag">Gespielt</div>
+        </div>
+        
+      </div>
+      <div class="btns">
+        <a class="btn ghost" href="https://www.the-royal-flash.de/#gigs" target="_blank" rel="noopener">Alle Termine auf der Bandseite</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-  <section class="profile-contact">
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div class="split">
+      <div class="rise">
+        <p class="secnum">04 — Kontakt</p>
+        <h2>Lust auf Austausch?</h2>
+      </div>
+      <div class="rise">
+        <p class="lead">Rund um SAP Analytics, Business Data Cloud, Planung, Embedded Analytics oder moderne Datenarchitekturen tausche ich mich immer gerne aus. Über lange Einheiten und laute Gitarren übrigens auch.</p>
+        <div class="links">
+          
+          <a href="https://www.linkedin.com/in/stephan-jacobs-656700149/" target="_blank" rel="noopener">LinkedIn</a>
+          
+          <a href="https://www.the-royal-flash.de" target="_blank" rel="noopener">The Royal Flash</a>
+          
+          <a href="mailto:info@the-royal-flash.de">Band-Mail</a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <h2>Lust auf Austausch?</h2>
 
-    <p>
-      Rund um SAP Analytics, Business Data Cloud, Planung,
-      Embedded Analytics oder moderne Datenarchitekturen tausche
-      ich mich immer gerne aus.
-    </p>
+  <footer>
+  <div class="wrap">
+    <span>&copy; 2026 Stephan Jacobs</span>
+    <nav class="footlinks" aria-label="Rechtliches">
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+    </nav>
+    <span>Daten · Distanz · Dezibel</span>
+  </div>
+</footer>
 
-    <a
-      href="https://www.linkedin.com/in/stephan-jacobs-656700149/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BxROAsw%2B5RWCEA0KcXJ0NXg%3D%3D"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="profile-button"
-    >
-      LinkedIn
-    </a>
-
-  </section>
-
-</div>
+  <script src="/assets/js/site.js" defer></script>
+</body>
+</html>

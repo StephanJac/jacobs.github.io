@@ -1,0 +1,68 @@
+eyebrow: "03 — Metal"
+title: "The Royal Flash"
+lead:
+  - >-
+    **Authentic Metal from the Heart of Germany.** Eine Metal-Band aus dem
+    Ruhrpott, die Metal und Rock mit Einflüssen aus allerlei Genres mischt. Der
+    größte Teil des Materials ist selbst geschrieben, dazu kommen ein paar Cover
+    als Überraschung.
+  - >-
+    Spaß ist eine der Hauptmotivationen — was nicht heißt, dass wir uns nicht nach
+    den Sternen strecken. Wir suchen ständig nach Bühnen, auf denen wir das
+    Material zeigen können.
+
+# leer lassen -> markierter Platzhalter
+role: ""
+role_placeholder: "ergänzen"
+
+links:
+  - label: "the-royal-flash.de"
+    url: "https://www.the-royal-flash.de"
+    solid: true
+  - label: "Instagram"
+    url: "https://www.instagram.com/the_royal_flash"
+  - label: "YouTube"
+    url: "https://www.youtube.com/channel/UCg3tXPBqIA7hK8Dpt0iZHzw"
+  - label: "Facebook"
+    url: "https://www.facebook.com/61565879413514"
+
+# Fotos liegen aktuell auf der Bandseite. Fuer den Dauerbetrieb besser
+# nach /assets/img/ kopieren und die Pfade hier austauschen.
+photos:
+  - src: "https://www.the-royal-flash.de/assets/images/Foto2.JPG"
+    alt: "The Royal Flash"
+    shot: "Bandfoto"
+  - src: "https://www.the-royal-flash.de/assets/images/WittenLive_01.jpg"
+    alt: "The Royal Flash live"
+    shot: "Live in Witten"
+  - src: "https://www.the-royal-flash.de/assets/images/WittenLive_03.jpg"
+    alt: "The Royal Flash live"
+    shot: "Live in Witten"
+  - src: "https://www.the-royal-flash.de/assets/images/WittenLive_05.jpg"
+    alt: "The Royal Flash live"
+    shot: "Live in Witten"
+
+videos:
+  - id: "v4diO6Z7Vuk"
+  - id: "aKFR-2wQNgY"
+  - id: "AGji-uerIS8"
+
+gigs_title: "Zuletzt live"
+gigs_note: "Termine aktualisieren"
+gigs:
+  - date: "17 JAN 26"
+    title: "Darkness Rising"
+    place: "C4 Consol, Gelsenkirchen"
+    tag: "Ausverkauft"
+  - date: "28 MRZ 26"
+    title: "Rage against Racism — Warmup Slot Battle"
+    place: "JZ Die Mühle, Duisburg"
+    tag: "Gespielt"
+  - date: "13 JUN 26"
+    title: "Underground Metal Fest"
+    place: "Werkhof Kulturzentrum Hohenlimburg, Hagen"
+    tag: "Gespielt"
+  - date: "01 AUG 26"
+    title: "Metal in Duisburg"
+    place: "Parkhaus Meiderich, Duisburg"
+    tag: "Gespielt"

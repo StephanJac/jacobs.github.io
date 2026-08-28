@@ -1,0 +1,10 @@
+{% assign s = include.s %}
+<section class="{{ s.bg | default: 'dark' }}"{% if s.id %} id="{{ s.id }}"{% endif %}>
+  <div class="wrap">
+    <blockquote class="pull">
+      <p>{{ s.quote }}</p>
+      {% for para in s.body %}<p>{{ para | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endfor %}
+    </blockquote>
+    {% include thema/editorial-note.html label=s.note_label text=s.note %}
+  </div>
+</section>

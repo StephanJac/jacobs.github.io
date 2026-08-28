@@ -1,0 +1,10 @@
+<nav class="top">
+  <div class="wrap">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}<i>.</i></a>
+    <ul>
+      {% for n in site.data.nav %}
+      <li><a class="jump" href="{{ '/#' | append: n.anchor | relative_url }}"><em>{{ n.num }}</em>{{ n.label }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,7 @@
+{% if include.buttons %}
+<div class="btns{% if include.flat %} flat{% endif %}">
+  {% for b in include.buttons %}
+  <a class="btn {% if b.style == 'secondary' %}btn-2{% else %}btn-1{% endif %}" href="{{ b.url | relative_url }}">{{ b.label }}</a>
+  {% endfor %}
+</div>
+{% endif %}

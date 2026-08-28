@@ -1,0 +1,22 @@
+{% comment %}
+  Dispatcher. Jeder Abschnitt einer Seite hat ein Feld "type";
+  hier wird der passende Baustein aus _includes/sections/ eingebunden.
+  Neuen Bausteintyp anlegen = Datei in sections/ + eine Zeile hier.
+{% endcomment %}
+{% assign s = include.section %}
+{% case s.type %}
+  {% when "hero" %}{% include thema/sections/hero.html s=s %}
+  {% when "cards" %}{% include thema/sections/cards.html s=s %}
+  {% when "layers" %}{% include thema/sections/layers.html s=s %}
+  {% when "table" %}{% include thema/sections/table.html s=s %}
+  {% when "steps" %}{% include thema/sections/steps.html s=s %}
+  {% when "list" %}{% include thema/sections/list.html s=s %}
+  {% when "quote" %}{% include thema/sections/quote.html s=s %}
+  {% when "faq" %}{% include thema/sections/faq.html s=s %}
+  {% when "cta" %}{% include thema/sections/cta.html s=s %}
+  {% when "richtext" %}{% include thema/sections/richtext.html s=s %}
+  {% else %}
+    {% if site.show_placeholders %}
+    <div class="wrap"><div class="note"><b>Unbekannter Bausteintyp</b>„{{ s.type }}" ist in _includes/section.html nicht registriert.</div></div>
+    {% endif %}
+{% endcase %}

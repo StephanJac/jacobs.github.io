@@ -1,0 +1,54 @@
+{% assign b = site.data.band %}
+<section class="black" id="metal" data-world="metal">
+  <div class="wrap">
+    <div class="split">
+      <div class="rise">
+        <p class="secnum">{{ b.eyebrow }}</p>
+        <h2>{{ b.title }}</h2>
+      </div>
+      <div class="rise">
+        {% for para in b.lead %}<p class="lead">{{ para | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endfor %}
+        <div class="btns">
+          {% for l in b.links %}
+          <a class="btn{% if l.solid %} solid{% else %} ghost{% endif %}" href="{{ l.url }}" target="_blank" rel="noopener">{{ l.label }}</a>
+          {% endfor %}
+        </div>
+        <p class="mono role">Meine Rolle in der Band: {% include placeholder.html value=b.role label=b.role_placeholder inline=true %}</p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      {% for ph in b.photos %}
+        {% include shot.html src=ph.src alt=ph.alt shot=ph.shot %}
+      {% endfor %}
+    </div>
+
+    <div class="block">
+      <p class="secnum rise">Hören &amp; sehen</p>
+      <div class="videos">
+        {% for v in b.videos %}
+        <div class="vid rise" data-yt="{{ v.id }}" role="button" tabindex="0" aria-label="Video abspielen">
+          <img src="https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg" alt="" loading="lazy">
+          <div class="play"><span>&#9654;</span></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="block">
+      <p class="secnum rise">{{ b.gigs_title }}{% if site.show_placeholders and b.gigs_note %} <span class="ph inline gap">{{ b.gigs_note }}</span>{% endif %}</p>
+      <div class="gigs">
+        {% for g in b.gigs %}
+        <div class="gig rise">
+          <div class="d">{{ g.date }}</div>
+          <div><div class="t">{{ g.title }}</div><p class="p">{{ g.place }}</p></div>
+          {% if g.tag %}<div class="tag">{{ g.tag }}</div>{% endif %}
+        </div>
+        {% endfor %}
+      </div>
+      <div class="btns">
+        <a class="btn ghost" href="{{ site.data.profile.band_url }}/#gigs" target="_blank" rel="noopener">Alle Termine auf der Bandseite</a>
+      </div>
+    </div>
+  </div>
+</section>

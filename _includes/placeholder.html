@@ -1,0 +1,11 @@
+{%- comment -%}
+  Gibt den Wert aus – oder eine sichtbar markierte Luecke.
+  Parameter: value, label, inline
+{%- endcomment -%}
+{%- if include.value and include.value != "" -%}
+{{ include.value }}
+{%- elsif site.show_placeholders -%}
+<span class="ph{% if include.inline %} inline{% endif %}">{{ include.label }}</span>
+{%- else -%}
+&nbsp;
+{%- endif -%}

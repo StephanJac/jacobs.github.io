@@ -1,0 +1,54 @@
+eyebrow: "02 — Ausdauersport"
+title: "Lange Einheiten, ehrliche Zahlen"
+lead:
+  - >-
+    Ausdauersport ist der Teil meines Lebens, in dem ich am direktesten erlebe,
+    was Daten können — und wo ihre Grenze liegt. Jede Einheit wird gemessen,
+    ausgewertet und in einen Plan eingeordnet. Und trotzdem entscheidet am Ende,
+    ob man an einem nasskalten Dienstag rausgeht.
+  - >-
+    Diese Doppelperspektive nehme ich mit in Projekte: Ich weiß, wie hilfreich
+    eine gute Kennzahl ist. Und wie leicht man sich mit ihr etwas vormacht.
+
+# value leer lassen -> es erscheint der markierte Platzhalter aus "placeholder"
+stats:
+  - label: "Lieblingsdistanz"
+    value: ""
+    placeholder: "Distanz"
+  - label: "Trainingsumfang"
+    value: ""
+    placeholder: "Std/Woche"
+  - label: "Dabei seit"
+    value: ""
+    placeholder: "Jahr"
+  - label: "Nächstes Vorhaben"
+    value: ""
+    placeholder: "Ziel"
+
+feature_photo:
+  src: "/assets/img/ausdauer-01.jpg"
+  alt: "Unterwegs im Training"
+  shot: "Foto einsetzen: Du in Bewegung — Seitenprofil, Gegenlicht, kein Zielfoto mit Startnummer"
+
+feature_title: "Was der Sport mit dem Beruf zu tun hat"
+feature_text:
+  - >-
+    Trainingssteuerung ist im Kern nichts anderes als ein Planungsmodell:
+    Ist-Daten, Zielwerte, Abweichungsanalyse, Szenarien. Nur ist der
+    Feedbackzyklus kürzer und das Ergebnis unbestechlicher. Wer drei Wochen lügt,
+    sieht es am vierten Sonntag.
+  - >-
+    Der wichtigste Übertrag ist aber ein anderer: Fortschritt entsteht nicht durch
+    die eine perfekte Einheit, sondern durch die achtzigste unspektakuläre. Auch
+    das gilt für Datenarchitekturen.
+
+gallery:
+  - src: "/assets/img/ausdauer-02.jpg"
+    alt: "Lange Einheit"
+    shot: "Querformat: Landschaft, du klein im Bild — zeigt Distanz statt Leistung"
+  - src: "/assets/img/ausdauer-03.jpg"
+    alt: "Ausrüstung"
+    shot: "Detail: Schuhe, Rad, Uhr am Handgelenk mit Daten"
+  - src: "/assets/img/ausdauer-04.jpg"
+    alt: "Nach dem Training"
+    shot: "Nach der Einheit: ehrlich, verschwitzt, kein Posieren"
