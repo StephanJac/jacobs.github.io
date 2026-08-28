@@ -3,7 +3,6 @@ layout: legal
 title: "Datenschutzerklärung"
 eyebrow: "Rechtliches"
 description: "Wie diese Website mit personenbezogenen Daten umgeht."
-accent: "analytics"
 hinweis: >-
   Diese Erklärung ist eine Vorlage, kein Rechtsrat. Sie beschreibt genau die
   Technik, die in diesem Projekt tatsächlich eingesetzt wird — wenn du etwas

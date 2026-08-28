@@ -3,7 +3,6 @@ layout: legal
 title: "Impressum"
 eyebrow: "Rechtliches"
 description: "Impressum von stephanjacobs.de nach § 5 DDG."
-accent: "analytics"
 hinweis: >-
   Dieses Impressum ist eine Vorlage, kein Rechtsrat. Bitte die Angaben
   vervollständigen und im Zweifel anwaltlich prüfen lassen — insbesondere die

@@ -19,16 +19,21 @@ Datenarchitektur, ein Trainingsplan und ein Probenraum funktionieren nach
 derselben Mechanik — Last, Takt, Ehrlichkeit. Das steht einmal am Anfang und wird
 danach nicht mehr erklärt.
 
-Sichtbar wird es über die Farbe: **der Akzent der ganzen Seite wandert beim
-Scrollen mit.** Blau in der Analytics-Welt, Bernstein beim Sport, Karminrot im
-Metal-Teil. Navigation, Buttons, Ziffern und der Duoton auf den Fotos ziehen mit.
-Eine Seite mit drei Temperaturen statt drei Kästen.
+Die Gestaltung hält sich bewusst zurück: helle Flächen, eine einzige Schrift
+(Inter), ein sparsam eingesetzter Akzent in gedämpftem Rot. Struktur entsteht
+über Weißraum und Haarlinien, nicht über Effekte. Konkret heißt das:
 
-Weitere Entscheidungen: Analytics steht als einziger Block auf hellem Papier — der
-berufliche Teil darf seriöser wirken, ohne den Rest zu zähmen. Fotos laufen in
-Duoton und bekommen bei Hover echte Farbe. Videos laden erst auf Klick über
-youtube-nocookie. Überschriften in Bricolage Grotesque: Plakatschrift mit Ecken,
-passend zu Metal, ohne in Fraktur-Klischees zu kippen.
+- **Fotos bleiben unbehandelt.** Kein Farbfilter, kein Duoton, keine
+  Hover-Spielerei — die Bilder zeigen sich so, wie sie sind.
+- **Keine Scroll-Animationen**, kein Filmkorn, keine wandernde Akzentfarbe.
+- **Überschriften in normaler Schreibweise** statt in Versalien, in ruhigen
+  Größen.
+- **Wenig JavaScript:** Es bleibt bei zwei Funktionen — fehlende Bilder werden zu
+  beschrifteten Platzhaltern, und Videos laden erst auf Klick über
+  youtube-nocookie.
+
+Der Akzent liegt in `--accent` ganz oben in `assets/css/style.scss` und ist in
+einer Zeile getauscht, falls das Rot nicht passt.
 
 ## Struktur
 

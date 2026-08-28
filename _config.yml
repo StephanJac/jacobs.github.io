@@ -27,7 +27,6 @@ defaults:
       type: "themen"
     values:
       layout: "thema"
-      accent: "analytics"
 
 sass:
   style: compressed

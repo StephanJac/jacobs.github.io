@@ -3,7 +3,7 @@
   welches Motiv dorthin gehoert – statt eines kaputten Bildes.
   Parameter: src, alt, shot, class
 {% endcomment %}
-<figure class="shot {{ include.class }} rise" data-shot="{{ include.shot }}">
+<figure class="shot {{ include.class }}" data-shot="{{ include.shot }}">
   {% if include.src and include.src != "" %}
   <img src="{% if include.src contains '://' %}{{ include.src }}{% else %}{{ include.src | relative_url }}{% endif %}" alt="{{ include.alt }}" loading="lazy">
   {% endif %}

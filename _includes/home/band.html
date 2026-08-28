@@ -2,11 +2,11 @@
 <section class="black" id="metal" data-world="metal">
   <div class="wrap">
     <div class="split">
-      <div class="rise">
+      <div>
         <p class="secnum">{{ b.eyebrow }}</p>
         <h2>{{ b.title }}</h2>
       </div>
-      <div class="rise">
+      <div>
         {% for para in b.lead %}<p class="lead">{{ para | markdownify | remove: "<p>" | remove: "</p>" }}</p>{% endfor %}
         <div class="btns">
           {% for l in b.links %}
@@ -24,10 +24,10 @@
     </div>
 
     <div class="block">
-      <p class="secnum rise">Hören &amp; sehen</p>
+      <p class="secnum">Hören &amp; sehen</p>
       <div class="videos">
         {% for v in b.videos %}
-        <div class="vid rise" data-yt="{{ v.id }}" role="button" tabindex="0" aria-label="Video abspielen">
+        <div class="vid" data-yt="{{ v.id }}" role="button" tabindex="0" aria-label="Video abspielen">
           <img src="https://i.ytimg.com/vi/{{ v.id }}/hqdefault.jpg" alt="" loading="lazy">
           <div class="play"><span>&#9654;</span></div>
         </div>
@@ -36,10 +36,10 @@
     </div>
 
     <div class="block">
-      <p class="secnum rise">{{ b.gigs_title }}{% if site.show_placeholders and b.gigs_note %} <span class="ph inline gap">{{ b.gigs_note }}</span>{% endif %}</p>
+      <p class="secnum">{{ b.gigs_title }}{% if site.show_placeholders and b.gigs_note %} <span class="ph inline gap">{{ b.gigs_note }}</span>{% endif %}</p>
       <div class="gigs">
         {% for g in b.gigs %}
-        <div class="gig rise">
+        <div class="gig">
           <div class="d">{{ g.date }}</div>
           <div><div class="t">{{ g.title }}</div><p class="p">{{ g.place }}</p></div>
           {% if g.tag %}<div class="tag">{{ g.tag }}</div>{% endif %}

@@ -2,18 +2,18 @@
 <section class="mid" id="ausdauer" data-world="ausdauer">
   <div class="wrap">
     <div class="split">
-      <div class="rise">
+      <div>
         <p class="secnum">{{ s.eyebrow }}</p>
         <h2>{{ s.title }}</h2>
       </div>
-      <div class="rise">
+      <div>
         {% for para in s.lead %}<p class="lead">{{ para }}</p>{% endfor %}
       </div>
     </div>
 
     <div class="stats">
       {% for st in s.stats %}
-      <div class="rise">
+      <div>
         <div class="v">{% include placeholder.html value=st.value label=st.placeholder %}</div>
         <div class="l">{{ st.label }}</div>
       </div>
@@ -22,7 +22,7 @@
 
     <div class="split split-wide align-stretch">
       {% include shot.html src=s.feature_photo.src alt=s.feature_photo.alt shot=s.feature_photo.shot %}
-      <div class="rise">
+      <div>
         <h3>{{ s.feature_title }}</h3>
         {% for para in s.feature_text %}<p class="lead">{{ para }}</p>{% endfor %}
         <div class="btns">
